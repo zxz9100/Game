@@ -17,6 +17,8 @@ def exit_game():
 start_button.on_click = start_game
 exit_button.on_click = exit_game
 
+
+
 app.run()
 
 

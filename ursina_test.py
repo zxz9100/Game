@@ -10,6 +10,8 @@ Grid_texture = load_texture('Texture.jpg')
 #map
 ground = Entity(model='plane', scale=(50, 1, 50), texture=Grid_texture, collider='box')
 
+
+
 model_entity = Entity(model=model_path, scale=(0.4, 0.4, 0.4), color=color.orange, rotation=(-90, 0, 90), position=(0, 0, 0))
 
 #fucking player settings
@@ -29,9 +31,11 @@ hand_visable = False
 hand.visible = False 
 weapon_state = 'none'
 
+
+
 def input(key):
     global hand_visable
-    #print(key) #for check
+    print(key) #for check
     
     if key == 'left shift':
         player.speed = 10
@@ -46,7 +50,10 @@ def input(key):
         elif hand_visable == True:
             hand.visible = False
             hand_visable = not hand_visable
-            
+    
+    # if key == 'tab':
+    #     start_button = Button(text='Start', color=color.azure, scale=(0.3, 0.1), position=(0, 0.1))
+
     if key =='escape':
         quit_game()
 
